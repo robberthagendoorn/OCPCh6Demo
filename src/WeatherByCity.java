@@ -4,12 +4,12 @@ import java.awt.Desktop;
 public class WeatherByCity {
 	
 	private String URL;
-	private String APIKey = "f9a2266dcb5a5577dcb3efa7dde67a5a"; 
+	private static final String API_KEY = "f9a2266dcb5a5577dcb3efa7dde67a5a"; 
 
 	WeatherByCity(String cityCountry, String language, String unitType) {
 		String query = "http://api.openweathermap.org/data/2.5/weather?q=" + cityCountry;
 		String lang = "&lang=" + language;	
-		String key = "&appid=" + APIKey;
+		String key = "&appid=" + API_KEY;
 		String unit = "&units=" + unitType;
 		String mode = "&mode=" + "html";
 		URL = query + lang + unit + mode + key;

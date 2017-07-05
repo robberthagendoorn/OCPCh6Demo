@@ -12,7 +12,7 @@ public class HttpUrlConnectionReader {
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
 			connection.setDoOutput(true);
-			connection.setReadTimeout(15000);
+			connection.setReadTimeout(250);
 			connection.connect();
 			return readOutput(connection);
 		} catch (IOException e) {
